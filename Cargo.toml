@@ -1,0 +1,10 @@
+[workspace]
+resolver =  "2"
+members = [
+    "read_schemars_code",
+#    "rio-fs-write",
+    "tracing_opentelemetry_openobserve",
+    "rustlib-demo"
+]
+
+[workspace.dependencies]

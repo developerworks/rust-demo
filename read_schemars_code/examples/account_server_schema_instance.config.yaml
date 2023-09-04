@@ -1,0 +1,22 @@
+local_ip: 192.168.0.1
+port: 8080
+finder_port: 8081
+env: dev
+app_info:
+  android:
+    appid: 82012312
+    secret: 1823812031
+  ios:
+    secret: wjjfdfkjfkdlf
+    appid: ldjfjdjfkdf
+  wechat_default:
+    appid: lwjfjdfdf
+    secret: 1o2u12321j3j213l
+hall_address: 192.168.0.1
+hall_http_address: 192.168.1.2
+log_level: debug
+new_coins:
+  - 20
+  - 210
+sheild_guest: false
+voice_chat_address: 192.168.2.1

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CPP_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/read_schemars_code/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/read_schemars_code/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tracing_opentelemetry_openobserve/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tracing_opentelemetry_openobserve/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rustlib-demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rustlib-demo/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

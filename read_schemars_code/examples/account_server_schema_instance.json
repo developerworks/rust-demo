@@ -1,0 +1,23 @@
+{
+  "$schema": "account_server_schema.json",
+  "local_ip": "192.168.1.1",
+  "port": 8989,
+  "hall_address": "192.168.1.2",
+  "hall_http_address": "192.168.1.2",
+  "finder_port": 1231,
+  "app_info": {
+    "android": {
+      "secret": "12",
+      "appid": ""
+    },
+    "ios": {
+      "appid": "",
+      "secret": ""
+    },
+    "wechat_default": {
+      "appid": "",
+      "secret": ""
+    }
+  },
+  "voice_chat_address": ""
+}

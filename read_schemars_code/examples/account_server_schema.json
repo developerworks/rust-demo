@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AccountServerConfig",
+  "type": "object",
+  "required": [
+    "finder_port",
+    "hall_address",
+    "hall_http_address",
+    "local_ip",
+    "port",
+    "voice_chat_address"
+  ],
+  "properties": {
+    "app_info": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/AppInfo"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "env": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "finder_port": {
+      "type": "integer",
+      "format": "uint16",
+      "minimum": 0.0
+    },
+    "hall_address": {
+      "type": "string"
+    },
+    "hall_http_address": {
+      "type": "string"
+    },
+    "local_ip": {
+      "title": "Server binding address",
+      "description": "The ip address of the server will listening",
+      "type": "string"
+    },
+    "log_level": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "new_coins": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "integer",
+        "format": "int64"
+      }
+    },
+    "port": {
+      "type": "integer",
+      "format": "uint16",
+      "maximum": 65535.0,
+      "minimum": 0.0
+    },
+    "sheild_guest": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "voice_chat_address": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "AppInfo": {
+      "type": "object",
+      "properties": {
+        "android": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/AppInfoNode"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ios": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/AppInfoNode"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "wechat_default": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/AppInfoNode"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "AppInfoNode": {
+      "type": "object",
+      "required": [
+        "appid",
+        "secret"
+      ],
+      "properties": {
+        "appid": {
+          "type": "string"
+        },
+        "secret": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
