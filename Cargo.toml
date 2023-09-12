@@ -1,10 +1,34 @@
 [workspace]
-resolver =  "2"
+resolver = "2"
 members = [
     "read_schemars_code",
-#    "rio-fs-write",
+    #    "rio-fs-write",
     "tracing_opentelemetry_openobserve",
-    "rustlib-demo"
+    "rustlib-demo",
+    "test-case-demo",
+    "thread_demo",
+    "pnet_demo",
+    "serde_demo",
+    "enum_iterator_demo",
+    "rand_demo",
+    "rust_embed_demo",
+    "anyhow_demo",
 ]
 
 [workspace.dependencies]
+test-case = "3.1.0"
+enum-iterator = "1.4.1"
+pnet = { version = "0.34.0", features = ["serde", "pcap"] }
+schemars = { version = "0.8.13", features = ["derive"] }
+serde = { version = "1.0.188", features = ["derive"] }
+serde_json = "1.0.105"
+serde_yaml = "0.9.25"
+validator = { version = "0.16.1", features = ["derive"] }
+serde_with = "3.3.0"
+ntest = "0.9.0"
+pretty_assertions = "1.4.0"
+chrono = "0.4.30"
+chrono-tz = "0.8.3"
+rand = "0.8.5"
+rust-embed = "8.0.0"
+anyhow = "1.0.75"

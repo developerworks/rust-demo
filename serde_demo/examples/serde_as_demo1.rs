@@ -12,7 +12,10 @@ struct CustomData {
 
 fn main() {
     let input = r#"{
-        "data": [["key1", 42], ["key2", 99]]
+        "data": {
+            "key1": 42,
+            "key2": 99
+        }
     }"#;
 
     let custom_data: CustomData = serde_json::from_str(input).expect("Failed to deserialize");

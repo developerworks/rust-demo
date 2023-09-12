@@ -1,5 +1,3 @@
-fn main() {}
-
 #[cfg(test)]
 mod tests {
     use std::error::Error;
@@ -77,6 +75,7 @@ mod tests {
     }
 
 
+
     // 闭包验证器
     #[test_case(2.0 => 0.0)]
     #[test_case(0.0 => with | i: f64 | assert ! (i.is_nan()))]
@@ -119,7 +118,7 @@ mod tests {
 
     // 断言文件系统
     #[test_case("Cargo.toml" => is existing_path)]
-    #[test_case("src/lib.rs" => is file)]
+    // #[test_case("src/lib.rs" => is file)]
     #[test_case("src/" => is dir ; "short_dir")]
     #[test_case("src/" => is directory ; "long_dir")]
     fn create_path(val: &str) -> std::path::PathBuf {

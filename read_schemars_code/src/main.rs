@@ -3,6 +3,7 @@ use std::fs;
 
 #[derive(JsonSchema)]
 pub struct MyStruct {
+    #[serde(default="test")]
     pub my_int: i32,
     pub my_bool: bool,
     pub my_nullable_enum: Option<MyEnum>,
@@ -20,4 +21,8 @@ fn main() {
     let jsonschema_str = serde_json::to_string_pretty(&schema).unwrap();
     fs::write("schema.json", &jsonschema_str).expect("Failed to write schema.json");
     println!("{}", jsonschema_str);
+}
+
+fn test() -> String {
+    "test".to_string()
 }

@@ -1,6 +1,6 @@
 use std::fs::OpenOptions;
 use chrono::{DateTime, FixedOffset, Local};
-use opentelemetry::trace::TracerProvider as _;
+use opentelemetry::trace::{Tracer, TracerProvider as _};
 use opentelemetry_otlp::new_exporter;
 use opentelemetry_sdk::trace::TracerProvider;
 use tracing::{debug, error, info, span, trace, warn, Level};
@@ -107,6 +107,7 @@ fn init_tracer() {
 
     // 如果使用全局, 则需要取消上面一行最后的 .init()
     // tracing::subscriber::set_global_default(registry).expect("Failed to set default subscriber");
+
 }
 
 fn init_oltp_telemetry() {
@@ -118,4 +119,9 @@ fn init_oltp_telemetry() {
     tracer.in_span("doing_work", |cx| {
         // Traced app logic here...
     });
+}
+
+fn init_pipeline() {
+    let pipline = opentelemetry_otlp::new_pipeline();
+    let traced = pipline.tracing();
 }

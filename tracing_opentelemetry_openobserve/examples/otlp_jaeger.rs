@@ -3,7 +3,7 @@ use opentelemetry_api::{Key, KeyValue};
 use opentelemetry_api::global::shutdown_tracer_provider;
 use opentelemetry_api::trace::TraceContextExt;
 use opentelemetry_otlp::{WithExportConfig};
-use tracing::{debug, error, info, span, trace, warn, Level};
+use tracing::{debug, error, info, span, trace, warn, Level, instrument};
 use opentelemetry_sdk::{trace as sdktrace, Resource};
 
 
@@ -25,7 +25,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync + 'static>
         // .with_export_config(
         //     ExportConfig::default()
         // )
-        .with_endpoint("http://192.168.0.23:4317");
+        .with_endpoint("http://192.168.0.23:4317")
+        ;
     // Then pass it into pipeline builder
     let tracer = opentelemetry_otlp::new_pipeline()
         .tracing()
@@ -53,6 +54,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync + 'static>
         info!(target: "my-target", "hello from {}. My price is {}. I am also inside a Span!", "banana", 2.99);
 
         app();
+        instrument_test();
     });
 
     shutdown_tracer_provider();
@@ -68,4 +70,9 @@ fn app() {
     warn!("warn hello tracing subscriber");
     error!("error hello tracing subscriber");
     trace!("trace hello tracing subscriber");
+}
+
+#[instrument]
+fn instrument_test() {
+    trace!("trace instrument_test");
 }

@@ -11,7 +11,6 @@ pub enum GlobalMessageTypes {
 
 use num_enum::IntoPrimitive;
 
-
 #[rustfmt::skip]
 #[derive(Debug, IntoPrimitive)]
 #[repr(u64)]
