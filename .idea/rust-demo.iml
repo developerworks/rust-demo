@@ -30,6 +30,10 @@
       <sourceFolder url="file://$MODULE_DIR$/rust_embed_demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/anyhow_demo/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/anyhow_demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jsonschema_demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jsonschema_demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/url_demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/url_demo/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
