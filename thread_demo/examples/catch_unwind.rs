@@ -27,15 +27,15 @@ fn main() {
                     // let timezone_name = now.format("%:z").to_string();
 
                     // 使用 chrono 获取当前时区名称, 例如: Asia/Shanghai
-                    let timezone_name = chrono::offset::Local::get_tz_by_id(&timezone).unwrap().name();
+                    // let timezone_name = chrono::offset::Local::get_tz_by_id(&timezone).unwrap().name();
 
                     let local_timezone: Local = now.timezone();
-                    let local_timezone_name = local_timezone.name();
+                    // let local_timezone_name = local_timezone.name();
 
 
                     // 打印当前时间, 时区, 时区名称
 
-                    panic!("Oops, something went wrong! {}, timezone: {}, {}", datetime, timezone, timezone_name);
+                    // panic!("Oops, something went wrong! {}, timezone: {}, {}", datetime, timezone, timezone_name);
                 });
 
                 // match result {

@@ -33,7 +33,7 @@ impl FormatTime for LocalFormat {
         write!(
             w,
             "{}",
-            DateTime::<Local>::from(Local::now()).format("%Y-%m-%d %H:%M:%S")
+            Local::now().format("%Y-%m-%d %H:%M:%S")
         )
     }
 }
@@ -93,7 +93,7 @@ fn init_tracer() {
 
 
     // 直接初始化
-    let _registry = tracing_subscriber::registry()
+    tracing_subscriber::registry()
         // 使用 RUST_LOG=info 过滤, 例如:
         // RUST_LOG=info cargo run --example fmt
         .with(tracing_subscriber::EnvFilter::from_default_env())
@@ -110,10 +110,11 @@ fn init_tracer() {
 
 }
 
+#[allow(unused)]
 fn init_oltp_telemetry() {
     let exporter = new_exporter();
     let provider = TracerProvider::builder()
-        .with_simple_exporter(exporter)
+        // .with_simple_exporter(exporter)
         .build();
     let tracer = provider.tracer("readme_example");
     tracer.in_span("doing_work", |cx| {
@@ -121,6 +122,7 @@ fn init_oltp_telemetry() {
     });
 }
 
+#[allow(unused)]
 fn init_pipeline() {
     let pipline = opentelemetry_otlp::new_pipeline();
     let traced = pipline.tracing();

@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="CPP_MODULE" version="4">
-  <component name="FacetManager">
-    <facet type="Python" name="Python facet">
-      <configuration sdkName="" />
-    </facet>
-  </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/actix_web_demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/actix_web_demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/anyhow_demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/anyhow_demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/async_task_demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/enum_iterator_demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jsonschema_demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jsonschema_demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/pnet_demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/pnet_demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rand_demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rand_demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/read_schemars_code/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/read_schemars_code/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/tracing_opentelemetry_openobserve/examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/tracing_opentelemetry_openobserve/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rust_embed_demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/rustlib-demo/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/rustlib-demo/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/pdf2img/examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/pdf2img/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/serde_demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/serde_demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test-case-demo/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test-case-demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test-case-demo/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/thiserror_demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/thiserror_demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/thread_demo/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/thread_demo/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/pnet_demo/examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/pnet_demo/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/serde_demo/examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/serde_demo/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/enum_iterator_demo/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/rand_demo/examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/rand_demo/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/rust_embed_demo/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/anyhow_demo/examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/anyhow_demo/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/jsonschema_demo/examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/jsonschema_demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tracing_opentelemetry_openobserve/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tracing_opentelemetry_openobserve/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/url_demo/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/url_demo/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
