@@ -83,6 +83,7 @@ async fn main() -> Result<(), AnyError> {
     worker.execute_main_module(&main_module).await?;
     // 执行脚本
     let result = worker.execute_script("", FastString::from("base64('abc')".to_string()));
+    
     // 结果
     if let Err(err) = result {
         log::error!("execute_mod err {:?}", err);
