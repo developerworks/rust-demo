@@ -1,4 +1,5 @@
 use deno_core::error::AnyError;
+use deno_core::v8;
 use deno_runtime::deno_core::FsModuleLoader;
 use deno_runtime::deno_broadcast_channel::InMemoryBroadcastChannel;
 use deno_runtime::deno_core::FastString;
@@ -89,7 +90,8 @@ async fn main() -> Result<(), AnyError> {
         log::error!("execute_mod err {:?}", err);
     } else {
         log::info!("execute_main_module end");
-        log::info!("调用ESM模块函数结果: {:?}", result.unwrap());
+        let g = result.unwrap();
+        log::info!("调用ESM模块函数结果: {:?}", g);
         // let sum: i32 = result.unwrap().into_raw().unwrap();
         // log::info!("sum: {}", sum);
     }
