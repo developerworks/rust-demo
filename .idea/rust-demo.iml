@@ -32,6 +32,11 @@
       <sourceFolder url="file://$MODULE_DIR$/tracing_opentelemetry_openobserve/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/url_demo/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/url_demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/deno_runtime_demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/deno_runtime_demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/js_sandbox_demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/js_sandbox_demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/napi_demo/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

@@ -14,7 +14,10 @@ fn main() {
     // Evaluate some code
     let code = "let a = 1+4; a*2";
     let output: serde_json::Value = eval(&mut runtime, code).expect("Eval failed");
+    
     println!("Output: {:?}", output);
+    println!("Output as i64: {:?}", output.as_i64());
+
     let expected_output = serde_json::json!(10);
     assert_eq!(expected_output, output);
 }

@@ -13,7 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06d3313a-9540-42f3-8d22-0276b59a3665" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/rust-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rust-demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deno_runtime_demo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/deno_runtime_demo/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deno_runtime_demo/examples/eval_js_value.rs" beforeDir="false" afterPath="$PROJECT_DIR$/deno_runtime_demo/examples/eval_js_value.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deno_runtime_demo/src/hello_runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/deno_runtime_demo/src/hello_runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deno_runtime_demo/src/lib.js" beforeDir="false" afterPath="$PROJECT_DIR$/deno_runtime_demo/src/lib.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deno_runtime_demo/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/deno_runtime_demo/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +36,12 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="8oi3r095" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": -1
-}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2VlorJ8Lle3JPGexeHpFj7h27GU" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -53,6 +62,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "settings.editor.selected.configurable": "language.rust.cargo.check",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -68,30 +78,47 @@
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
-      <window_info anchor="bottom" id="Build" weight="0.3300518" />
+      <window_info anchor="bottom" id="Build" weight="0.26994818" />
       <window_info anchor="bottom" id="Python Packages" />
       <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="File Transfer" />
-      <window_info anchor="bottom" id="Run" weight="0.3300518" />
+      <window_info anchor="bottom" id="Run" weight="0.26994818" />
       <window_info anchor="bottom" id="Vcpkg" />
       <window_info anchor="bottom" id="clangd" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.7984456" />
-      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="bottom" id="Problems View" order="1" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.3072539" />
+      <window_info anchor="bottom" id="Services" order="3" />
       <window_info anchor="right" id="Cargo" />
       <window_info anchor="right" id="make" side_tool="true" />
       <window_info anchor="right" id="Meet New UI" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
-      <window_info anchor="right" id="Database" order="2" weight="0.25" />
-      <window_info anchor="right" id="Translation.Wordbook" order="4" side_tool="true" />
+      <window_info anchor="right" id="Database" order="1" weight="0.25" />
+      <window_info anchor="right" id="Translation.Wordbook" order="2" side_tool="true" />
     </layout>
   </component>
   <component name="RsExternalLinterProjectSettings">
     <option name="runOnTheFly" value="true" />
     <option name="tool" value="Clippy" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Cargo.Run dequeue_cycle_queue">
+    <configuration name="Run deno_runtime_demo" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="run --package deno_runtime_demo --bin deno_runtime_demo" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Run dequeue_cycle_queue" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="run --package rustlib-demo --example dequeue_cycle_queue" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -145,14 +172,12 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cargo.Run dequeue_stack" />
-        <item itemvalue="Cargo.Run dequeue_queue" />
-        <item itemvalue="Cargo.Run dequeue_cycle_queue" />
+        <item itemvalue="Cargo.Run deno_runtime_demo" />
       </list>
     </recent_temporary>
   </component>
   <component name="RustProjectSettings">
-    <option name="toolchainHomeDirectory" value="$PROJECT_DIR$/../.cargo/bin" />
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
   </component>
   <component name="RustfmtProjectSettings">
     <option name="runRustfmtOnSave" value="true" />
@@ -167,11 +192,19 @@
       <option name="presentableId" value="Default" />
       <updated>1695420226286</updated>
       <workItem from="1695420227922" duration="1685000" />
+      <workItem from="1695681724613" duration="83000" />
+      <workItem from="1695681831715" duration="83000" />
+      <workItem from="1695681977489" duration="602000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="com.intellij.configurationType" implementationName="CargoCommandRunConfiguration" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

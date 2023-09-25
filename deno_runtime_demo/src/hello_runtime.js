@@ -1,3 +1,6 @@
 import lib from './lib.js';
-globalThis.add = lib.add;
-globalThis.base64 = lib.base64;
+
+globalThis.gen_key = lib.gen_key;
+globalThis.secret = lib.secret;
+globalThis.encrypto = lib.encrypto;
+globalThis.decrypto = lib.decrypto;

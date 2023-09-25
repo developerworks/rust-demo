@@ -5,6 +5,7 @@
 - [rust axum 项目实践 deno js运行时集成](https://blog.csdn.net/qq_15935157/article/details/124332463)
 - [refactor(runtime): "Worker::execute_script" returns value #17092](https://github.com/denoland/deno/pull/17092)
 - [处理 v8:Global<v8:Value>](https://github.com/denoland/deno/discussions/12635)
+  在Rust端处理V8返回的对象有两种方式, 一种是使用V8的API, 另一种是使用serde_v8进行反序列化会Rust 的类型
 
 ## 问题
 
@@ -15,6 +16,9 @@
     不同的 rusty_v8 版本肯定是相互不兼容的.
     查看一个 crate 依赖了哪些其他的 crete, 可以参考这个连接(Dependencies标签):
     https://crates.io/crates/serde_v8/0.121.0/dependencies
+
+    一个简单的办法就是在 `cargo build` 或者 `cargo run` 出现的编译列表中`不要`出现 `v8` 的两个版本.
+    ![编译列表](./v8-check-versions.png)
 
 - Deno 中的 globalThis 是什么东西？
 

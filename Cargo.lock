@@ -1204,6 +1204,8 @@ dependencies = [
  "deno_runtime",
  "env_logger",
  "log",
+ "serde_json",
+ "serde_v8 0.123.0",
  "tokio",
 ]
 

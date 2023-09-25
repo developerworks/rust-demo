@@ -1,8 +1,8 @@
 use deno_core::error::AnyError;
 use deno_core::v8;
-use deno_runtime::deno_core::FsModuleLoader;
 use deno_runtime::deno_broadcast_channel::InMemoryBroadcastChannel;
 use deno_runtime::deno_core::FastString;
+use deno_runtime::deno_core::FsModuleLoader;
 use deno_runtime::deno_web::BlobStore;
 use deno_runtime::permissions::Permissions;
 use deno_runtime::permissions::PermissionsContainer;
@@ -83,17 +83,33 @@ async fn main() -> Result<(), AnyError> {
     // 执行主模块
     worker.execute_main_module(&main_module).await?;
     // 执行脚本
-    let result = worker.execute_script("", FastString::from("base64('abc')".to_string()));
-    
+    let result = worker.execute_script("", FastString::from("gen_key()".to_string()));
+
     // 结果
     if let Err(err) = result {
-        log::error!("execute_mod err {:?}", err);
+        log::error!("模块执行错误 {:?}", err);
     } else {
-        log::info!("execute_main_module end");
+        log::info!("模块执行成功结束");
         let g = result.unwrap();
         log::info!("调用ESM模块函数结果: {:?}", g);
-        // let sum: i32 = result.unwrap().into_raw().unwrap();
-        // log::info!("sum: {}", sum);
+        let mut scope = worker.js_runtime.handle_scope();
+        let local = v8::Local::new(&mut scope, g);
+        let deserialized = serde_v8::from_v8::<serde_json::Value>(&mut scope, local);
+        let _ = match deserialized {
+            Ok(value) => {
+                let v = serde_json::to_string_pretty(&value).unwrap_or("".to_string());
+                log::info!("模块函数 gen_key() 返回值: {}", v);
+
+                let public_key = value.get("public_key").unwrap().as_str().unwrap();
+                let private_key = value.get("private_key").unwrap().as_str().unwrap();
+
+                
+                log::info!("public_key: {}", public_key);
+                log::info!("private_key: {}", private_key);
+                Ok(value)
+            }
+            Err(err) => Err(format!("Cannot deserialize value: {:?}", err)),
+        };
     }
     // 事件循环
     worker.run_event_loop(false).await?;
