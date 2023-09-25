@@ -13,16 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06d3313a-9540-42f3-8d22-0276b59a3665" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rust-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rust-demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsonschema_demo/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/jsonschema_demo/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rustlib-demo/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/rustlib-demo/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thread_demo/examples/catch_unwind.rs" beforeDir="false" afterPath="$PROJECT_DIR$/thread_demo/examples/catch_unwind.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracing_opentelemetry_openobserve/examples/fmt.rs" beforeDir="false" afterPath="$PROJECT_DIR$/tracing_opentelemetry_openobserve/examples/fmt.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +48,10 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -73,15 +68,16 @@
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
-      <window_info anchor="bottom" id="Build" />
+      <window_info anchor="bottom" id="Build" weight="0.3300518" />
       <window_info anchor="bottom" id="Python Packages" />
       <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="File Transfer" />
+      <window_info anchor="bottom" id="Run" weight="0.3300518" />
       <window_info anchor="bottom" id="Vcpkg" />
       <window_info anchor="bottom" id="clangd" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.7984456" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="right" id="Cargo" />
       <window_info anchor="right" id="make" side_tool="true" />
@@ -90,6 +86,10 @@
       <window_info anchor="right" id="Database" order="2" weight="0.25" />
       <window_info anchor="right" id="Translation.Wordbook" order="4" side_tool="true" />
     </layout>
+  </component>
+  <component name="RsExternalLinterProjectSettings">
+    <option name="runOnTheFly" value="true" />
+    <option name="tool" value="Clippy" />
   </component>
   <component name="RunManager">
     <configuration name="Run dequeue_cycle_queue" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
@@ -154,6 +154,10 @@
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$PROJECT_DIR$/../.cargo/bin" />
   </component>
+  <component name="RustfmtProjectSettings">
+    <option name="runRustfmtOnSave" value="true" />
+    <option name="useRustfmt" value="true" />
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -162,7 +166,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695420226286</updated>
-      <workItem from="1695420227922" duration="265000" />
+      <workItem from="1695420227922" duration="1685000" />
     </task>
     <servers />
   </component>

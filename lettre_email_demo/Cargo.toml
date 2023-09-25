@@ -1,0 +1,12 @@
+[package]
+name = "lettre_email_demo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lettre = "0.10.4"
+lettre_email = "0.9.4"
+native-tls = "0.2.11"
+socks = "0.3.4"
