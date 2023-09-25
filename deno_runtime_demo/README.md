@@ -8,6 +8,14 @@
 
 ## 问题
 
+- 有个特别要注意的地方: rusty_v8 的版本兼容问题
+
+    Cargo.toml 中的 crate, 包括 deno_core, deno_runtime, serde_v8 这些 crete, 注意一定底层的 rusty_v8 版本一定要相同
+    因为 rusty_v8 是 v8 引擎的 Rust 绑定, rusty_v8 应该是跟着 v8 引擎的接口一起变化的,
+    不同的 rusty_v8 版本肯定是相互不兼容的.
+    查看一个 crate 依赖了哪些其他的 crete, 可以参考这个连接(Dependencies标签):
+    https://crates.io/crates/serde_v8/0.121.0/dependencies
+
 - Deno 中的 globalThis 是什么东西？
 
 `globalThis` 在 Deno 中是指向全局对象的引用,它提供了一个标准的方式来访问全局对象,无论是在浏览器还是 Node.js 环境中。
