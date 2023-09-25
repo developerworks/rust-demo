@@ -26,3 +26,23 @@
     /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/v8-0.78.0/src/inspector.rs:196: multiple definition of `v8_inspector__V8InspectorClient__BASE__consoleAPIMessage'; /root/rust/rust-demo/target/debug/deps/libv8-99cb9bdadd322885.rlib(v8-99cb9bdadd322885.v8.ebceacab2b7ad3ad-cgu.08.rcgu.o):/root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/v8-0.76.0/src/inspector.rs:196: first defined here
             collect2: error: ld returned 1 exit status
     ```
+
+- 编译时 librusty_v8 静态库下载的问题, 找到下载脚本, 
+
+```
+(base) ➜  deno_runtime_demo git:(main) ✗ locate download_file.py
+/root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rusty_v8-0.22.3/tools/download_file.py
+/root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rusty_v8-0.32.1/tools/download_file.py
+/root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/v8-0.75.1/tools/download_file.py
+/root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/v8-0.78.0/tools/download_file.py
+
+# 全部增加环境变量
+os.environ['HTTP_PROXY'] = 'http://192.168.0.103:1087'
+os.environ['HTTPS_PROXY'] = 'http://192.168.0.103:1087'
+```
+
+编译 deno_runtime 这个 crate, 依据 [rusty_v8](https://github.com/denoland/rusty_v8) 仓库 README 的介绍设置了 `RUSTY_V8_MIRROR` 环境变量
+, 但是不起作用, 需要 Hack 一下 Python 的下载脚本
+![编译时静态库下载代理设置](./python-proxy.png)
+
+
