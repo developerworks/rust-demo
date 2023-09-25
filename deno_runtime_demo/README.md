@@ -19,7 +19,7 @@
 
 所以在 Deno 中,你可以使用 globalThis 来安全可靠地访问全局作用域,这与直接使用全局变量相比是一个更好的选择。
 
-- deno_runtime 已经包含了 deno_core, 因此不需要引入 deno_core, 否则容易到值 deno_runtime 中的 deno_core 和单独引入的 deno_core 版本不匹配导致如下多次定义的问题
+- deno_runtime 中的 deno_core 版本和Cargo.toml 引入的 deno_core 版本不匹配导致如下多次定义的问题
 
     ```
     /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/v8-0.78.0/src/inspector.rs:196: multiple definition of `v8_inspector__V8InspectorClient__BASE__consoleAPIMessage'; /root/rust/rust-demo/target/debug/deps/libv8-99cb9bdadd322885.rlib(v8-99cb9bdadd322885.v8.ebceacab2b7ad3ad-cgu.08.rcgu.o):/root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/v8-0.76.0/src/inspector.rs:196: first defined here
