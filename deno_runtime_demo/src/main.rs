@@ -1,10 +1,5 @@
-// Copyright 2018-2023 the Deno authors. All rights reserved. MIT license.
-
-// use deno_core::FastString;
 use deno_core::error::AnyError;
-// use deno_core::FsModuleLoader;
 use deno_runtime::deno_core::FsModuleLoader;
-// use deno_core::ZeroCopyBuf;
 use deno_runtime::deno_broadcast_channel::InMemoryBroadcastChannel;
 use deno_runtime::deno_core::FastString;
 use deno_runtime::deno_web::BlobStore;
@@ -27,11 +22,9 @@ async fn main() -> Result<(), AnyError> {
     env_logger::init();
     // 模块加载器器
     let module_loader = Rc::new(FsModuleLoader);
-
     let create_web_worker_cb = Arc::new(|_| {
         todo!("Web workers are not supported in the example");
     });
-
     // Worker 选项
     let options = WorkerOptions {
         bootstrap: BootstrapOptions {
@@ -72,7 +65,6 @@ async fn main() -> Result<(), AnyError> {
         stdio: Default::default(),
         create_params: None,
         root_cert_store_provider: None,
-        // fs: todo!(),
         fs: Arc::new(deno_fs::RealFs),
         module_loader,
     };
@@ -83,27 +75,23 @@ async fn main() -> Result<(), AnyError> {
     log::info!("main module path: {:?}", main_module);
     // 权限
     let permissions = Permissions::allow_all();
-
+    // 权限容器
     let permission_container = PermissionsContainer::new(permissions);
-
     // 根 Worker, 几乎所有在程序执行期间创建的 WebWorker 都是这个 Worker 的后代
     let mut worker = MainWorker::bootstrap_from_options(main_module.clone(), permission_container, options);
-
     // 执行主模块
     worker.execute_main_module(&main_module).await?;
-
     // 执行脚本
     let result = worker.execute_script("", FastString::from("base64('abc')".to_string()));
-
     // 结果
     if let Err(err) = result {
         log::error!("execute_mod err {:?}", err);
     } else {
         log::info!("execute_main_module end");
         log::info!("调用ESM模块函数结果: {:?}", result.unwrap());
+        // let sum: i32 = result.unwrap().into_raw().unwrap();
+        // log::info!("sum: {}", sum);
     }
-
-
     // 事件循环
     worker.run_event_loop(false).await?;
     log::info!("run_event_loop  end");

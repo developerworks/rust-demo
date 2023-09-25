@@ -2,6 +2,7 @@
 
 - [How to call deno in rust? #17345](https://github.com/denoland/deno/discussions/17345)
 - [使用 Rust 和 eno_core 创建您自己的 JavaScript 运行时](https://zenn.dev/k41531/articles/3896b8d496ebe0)
+- [rust axum 项目实践 deno js运行时集成](https://blog.csdn.net/qq_15935157/article/details/124332463)
 
 ## 问题
 
