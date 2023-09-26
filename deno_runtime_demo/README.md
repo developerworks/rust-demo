@@ -4,7 +4,7 @@
 - [使用 Rust 和 eno_core 创建您自己的 JavaScript 运行时](https://zenn.dev/k41531/articles/3896b8d496ebe0)
 - [rust axum 项目实践 deno js运行时集成](https://blog.csdn.net/qq_15935157/article/details/124332463)
 - [refactor(runtime): "Worker::execute_script" returns value #17092](https://github.com/denoland/deno/pull/17092)
-- [处理 v8:Global<v8:Value>](https://github.com/denoland/deno/discussions/12635)
+- [处理 `v8:Global<v8:Value>`](https://github.com/denoland/deno/discussions/12635)
   在Rust端处理V8返回的对象有两种方式, 一种是使用V8的API, 另一种是使用serde_v8进行反序列化会Rust 的类型
 
 ## 问题
